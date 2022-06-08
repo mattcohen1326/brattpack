@@ -1,0 +1,60 @@
+<html lang="en">
+
+	<head>
+		
+		<title>
+			Fratcoin
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="matthew cohen" content="BrattPack63">
+		<link rel="stylesheet" type="text/css" href="App.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
+		
+	</head>
+	
+	<body> 
+	
+		<div id="nav">
+			<div class = "stripe"></div>
+			<div class = "stripe">
+				<div id = "navMenu">
+					<a class = "nav-item"href = "memes.html">Memes</a>
+					<a class = "nav-item" href = "spaces.html">Spaces</a>
+					<img src='img/logo.png'/>
+					<a class = "nav-item" href = "appearances.html">Appearances</a>
+					<a class = "nav-item" href = "tshirts.html">T-Shirts</a>
+				</div>
+			</div>
+			<div class = "stripe"></div>
+		</div>
+		<div id="Main-Content">
+			<div id="Feed">
+				<a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/TheBrattPack63?ref_src=twsrc%5Etfw">Tweets by TheBrattPack63</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<div id = "Articles">
+			</div>
+			<script>
+				for (let i = 0; i < 10; i++) {
+				const elem = document.createElement(`a`);
+				elem.className = "Article";
+				const h = document.createElement(`h1`);
+				const img = document.createElement(`img`);
+				img.src = 'img/bratt.jpg';
+				h.innerHTML = "TEST";
+				elem.href = "test.html";
+				h.appendChild(img);
+				elem.appendChild(h);
+					document.getElementById("Articles").appendChild(elem);
+				}
+			</script>
+			<div id = "right-side-content">
+						<h1 id = "best-player" >JBITBPITNHL</h1>
+						<h1 id ="count">THE BRATT PACK IS CURRENTLY 3,540 STRONG</h1>
+			</div>
+		</div>
+
+	
+	</body>

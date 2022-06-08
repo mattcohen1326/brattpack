@@ -1,0 +1,27 @@
+#Main-Content-Article{
+	width:50vw;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	width:100vw;
+	text-align:center;
+	color:white;
+	padding-top:15vh;
+}
+
+#Main-Picture{
+	width:40vw;
+	
+}
+
+#Main-Picture img{
+	width:100%;
+}
+
+#content{
+	width:100vw;
+}
+
+.commentbox{
+	background-color:white;
+}
