@@ -6,18 +6,17 @@ body{
 
 #nav{
 	height: 15vh;
-    /* display: flex; */
     display: flex;
-    /* justify-content: center; */
     flex-wrap: wrap;
     justify-content: space-between;
+	
     width: 100vw;	
 }
 
 #nav img{
-	width:10vw;
+	width:7vw;
 	z-index:1;
-	padding-top:7vh;
+	margin-top:0 !important;
 }
 #nav .stripe{
 	background-color: white;
@@ -49,15 +48,18 @@ body{
 	display:flex;
 	justify-content:space-between;
 }
-
+#Main-Content p{
+	width:50vw;
+	
+}
 #best-player{
 	color:white;
 }
 
 #navMenu{
-	display: flex;
-    justify-content: space-evenly;
-	align-items:center;
+	display:grid;
+	grid-template-columns:5vw 15vw 5vw 15vw 5vw 10vw 5vw 15vw 5vw 15vw 5vw ;
+	grid-template-rows:1.5vh 3vh 1.5vh 3vh 1.5vh 3vh 1.5vh;
     width: 100vw;
 }
 @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
@@ -68,12 +70,16 @@ body{
     font-family: 'Seaweed Script', cursive;
     font-size: 2.5vw;
     text-shadow: 1px 1px red;
+	text-align:center;
+	grid-row-start:3;
 	
 }
 #navMenu a:hover{
 	color:red !important;
 }
-
+#navMenu a img{
+	margin-top:0vh !important;
+}
 #Articles{
 	overflow-y:scroll;	
 	overflow-x:hidden;
@@ -103,10 +109,70 @@ body{
 	width:20vw;
 	text-align:center;
 	color:white;
+	padding-top:15vh;
+	height:100vh;
+}
+#counter{
+	height:15vh;
+	display:flex;
+	flex-wrap:wrap;
+	text-align:center;
+	justify-content:center;
+	font-size:.6vw;
+}
+#currently{
+	width:10vw;
+}
+
+#count{
+	width:20vw;
+	color:red !important;
+}
+
+#spaces{
+	margin-top:3vw;
 	display:flex;
 	align-items:center;
-	padding-bottom:30vh;
-	flex-wrap:wrap;
 	justify-content:center;
+	flex-wrap:wrap;
+	text-align:center;
 }
+#spaces img{
+	width:25%;
+	
+}
+
+#spaces h2{
+	color: white;
+	width:100vw;
+}
+
+#spaces p{
+	color:white;
+	width:40vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

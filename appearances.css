@@ -1,0 +1,30 @@
+#appearances{
+	width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+	padding-top:5vh;
+}
+
+
+.appearance{
+	width: 60vw;
+    height: 50vh;
+    overflow: hidden;
+    padding-top: 5vh;
+}
+
+.appearance img{
+	width:75%;
+}
+
+.appearance:hover{
+	background-color:red;
+}
+
+h1{
+	padding-top:2vh;
+	color:white;
+	text-align:center;
+}
