@@ -9,14 +9,16 @@
 
 
 .appearance{
-	width: 60vw;
-    height: 50vh;
+	width: 30vw;
+    height: 30vw;
     overflow: hidden;
-    padding-top: 5vh;
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
 }
 
 .appearance img{
-	width:75%;
+	width:50%;
 }
 
 .appearance:hover{
