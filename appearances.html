@@ -10,6 +10,7 @@
 		<meta name="matthew cohen" content="BrattPack63">
 		<link rel="stylesheet" type="text/css" href="App.css">
 		<link rel="stylesheet" type="text/css" href="appearances.css">
+		<script src="content.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
@@ -24,20 +25,21 @@
 			<div class = "stripe"></div>
 		</div>
 		<div id="nav">
-		<div id = "navMenu">
-					<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
-					<a style = "grid-column-start:4""nav-item" href = "spaces.html">Spaces</a>
-					<a style = "z-index:1; text-align:center; grid-column-start:6""z-index:1" href = "index.html"> 
-						<img src='img/logo.png'/>
-					</a>
-					<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
-					<a style ="grid-column-start:10"class = "nav-item" href = "tshirts.html">T-Shirts</a>
-				</div>
+			<div id = "navMenu">
+				<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
+				<a style = "grid-column-start:4" class = "nav-item" href = "spaces.html">Spaces</a>
+				<a id = "logo" style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
+					<img src='img/logo.png'/>
+				</a>
+				<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
+				<a style ="grid-column-start:10"class = "nav-item" href = "pics.html">Bratt Pack Pics</a>
+			</div>
 		
 		</div>
+		
 		<h1>CHECK OUT @BRATTPACK63 ON THESE PODCAST APPEARANCES</h1>
 		<div id = "appearances">
-			<a  target=”_blank” href = "https://open.spotify.com/episode/7kNsTchgIqDw2f3gjBOHiL?si=uertW9B5R3O0aQqn-wXoKA&nd=1" >
+			<!--<a  target=”_blank” href = "https://open.spotify.com/episode/7kNsTchgIqDw2f3gjBOHiL?si=uertW9B5R3O0aQqn-wXoKA&nd=1" >
 				<div class = "appearance">
 					<img src = "img/1.png" />
 				</div>
@@ -51,7 +53,23 @@
 				<div class = "appearance">
 					<img src = "img/3.png" />
 				</div>
-			</a>
+			</a>-->
 		
 		</div>
+		<script>
+			const loadAppearances = myJSON.content
+			const appearances = loadAppearances.filter(space => (space.type === 'appearance'))
+			for(var i = 0; i < appearances.length; i++){
+				const a = document.createElement('a')
+				a.href = appearances[i].url
+				a.target = "_blank"
+				const appearance = document.createElement('div')
+				appearance.className = "appearance"
+				const img = document.createElement('img')
+				img.src = appearances[i].img
+				appearance.appendChild(img)
+				a.appendChild(appearance)
+				document.getElementById('appearances').appendChild(a)
+			}
+		</script>
 	</body>

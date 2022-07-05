@@ -30,3 +30,33 @@ h1{
 	color:white;
 	text-align:center;
 }
+@media screen and (max-width:1223px){
+	#Main-Content{
+		justify-content: center !important;
+	}
+	#right-side-content{
+		position:fixed;
+		opacity:0%;
+		z-index:-1;
+	}
+
+	#feed{
+		position:fixed;
+		opacity:0%;
+		z-index:-1;
+	}
+	.nav-item{
+		font-size:4vw !important;
+	}
+
+	#logo{
+		position:fixed;
+		z-index:-1;
+		opacity:0%;
+	}
+
+	#navMenu{
+		display:flex !important;
+		justify-content: space-around;
+	}
+}

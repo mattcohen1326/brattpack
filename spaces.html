@@ -9,6 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="matthew cohen" content="BrattPack63">
 		<link rel="stylesheet" type="text/css" href="App.css">
+		<script src="content.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
@@ -23,24 +24,40 @@
 			<div class = "stripe"></div>
 		</div>
 		<div id="nav">
-		<div id = "navMenu">
-					<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
-					<a style = "grid-column-start:4""nav-item" href = "spaces.html">Spaces</a>
-					<a style = "z-index:1; text-align:center; grid-column-start:6""z-index:1" href = "index.html"> 
-						<img src='img/logo.png'/>
-					</a>
-					<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
-					<a style ="grid-column-start:10"class = "nav-item" href = "tshirts.html">T-Shirts</a>
-				</div>
-		
+			<div id = "navMenu">
+				<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
+				<a style = "grid-column-start:4" class = "nav-item" href = "spaces.html">Spaces</a>
+				<a id = "logo" style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
+					<img src='img/logo.png'/>
+				</a>
+				<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
+				<a style ="grid-column-start:10"class = "nav-item" href = "pics.html">Bratt Pack Pics</a>
+			</div>
 		</div>
-		
 		<div id = "spaces">
 			<img src = 'img/spaces.jpg'/>
 			<h2>Check back here for future spaces announcements and recaps.</h2>
 			<p>@BrattPack63 host's twitter spaces where fans can discuss the Devils.  They are a great platform
 			for the community to connect.  They are usually announced the day of or the day before, we will post here
 			if there is a planned space upcoming</p>
+			<h1 style = "color:white; width:100vw;">UPCOMING SPACES: </h1>
+			<script>
+				
+				const loadedSpaces = myJSON.content
+				console.log(loadedSpaces)
+				const finalSpaces = loadedSpaces.filter(space => (space.type === 'space'))
+				console.log(finalSpaces)
+				for(var i = 0; i < finalSpaces.length; i++){
+					const newSpaceDiv = document.createElement('div')
+					newSpaceDiv.className = "space-component"
+					const newSpace = document.createElement('img')
+					newSpace.src = finalSpaces[i].img
+					newSpaceDiv.appendChild(newSpace)
+					newSpaceDiv.id = finalSpaces[i].date
+					document.getElementById('spaces').appendChild(newSpaceDiv)	
+				}
+				
+			</script>
 		</div>
 		
 	</body>

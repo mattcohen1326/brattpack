@@ -3,11 +3,12 @@
 	<head>
 		
 		<title>
-			@BrattPack63
+			@TheBrattPack63
 		</title>
 
 		<meta charset="utf-8">
 		<meta name="matthew cohen" content="BrattPack63">
+		<script src="content.js"></script>
 		<link rel="stylesheet" type="text/css" href="App.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
@@ -27,11 +28,11 @@
 		<div id = "navMenu">
 					<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
 					<a style = "grid-column-start:4" class = "nav-item" href = "spaces.html">Spaces</a>
-					<a style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
+					<a id = "logo" style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
 						<img src='img/logo.png'/>
 					</a>
 					<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
-					<a style ="grid-column-start:10"class = "nav-item" href = "tshirts.html">T-Shirts</a>
+					<a style ="grid-column-start:10"class = "nav-item" href = "pics.html">Bratt Pack Pics</a>
 				</div>
 		
 		</div>
@@ -42,17 +43,30 @@
 			<div id = "Articles">
 			</div>
 			<script>
-
-				for (let i = 0; i < 10; i++) {
+				console.log(myJSON.content)
+				const articles = myJSON.content
+				for (let i = 0; i < articles.length; i++) {
 				const elem = document.createElement(`a`);
 				elem.className = "Article";
 				const h = document.createElement(`h1`);
 				const img = document.createElement(`img`);
-				img.src = 'img/bratt.jpg';
-				h.innerHTML = "TEST";
-				elem.href = "test.html";
-				h.appendChild(img);
-				elem.appendChild(h);
+				img.src = articles[i].img;
+				h.innerHTML = articles[i].title;
+				elem.href = articles[i].route;
+				
+				if(articles[i].type === "article"){
+					elem.appendChild(h);
+					elem.appendChild(img);
+				}
+				else if(articles[i].type === "space"){
+					elem.appendChild(h);
+					elem.style.backgroundColor = "rgb(166,62,62)"
+				}
+				else if(articles[i].type === "appearance"){
+					elem.appendChild(h);
+
+					elem.style.backgroundColor = "rgb(24,142,114)"
+				}
 					document.getElementById("Articles").appendChild(elem);
 				}
 			</script>
@@ -60,7 +74,7 @@
 						<h1 id = "best-player" >JBITBPITNHL</h1>
 						<div id = "counter">
 						<h1 id ="currently">THE BRATT PACK IS CURRENTLY</h1>
-						<h1 id = "count" >3,540</h1>
+						<h1 id = "count" >4,233</h1>
 						<h1 id = "strong">STRONG</h1>
 						</div>
 			</div>

@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Notable';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/notable/v14/gNMEW3N_SIqx-WX9yHQiFQ.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 body{
 	background-color:black;
 	overflow-x:hidden;
@@ -7,10 +15,6 @@ body{
 
 body a{
 	text-decoration: none;
-}
-
-body a:visited{
-	color:inherit;
 }
 
 
@@ -44,7 +48,7 @@ body a:visited{
     align-items: center;
     justify-content: space-evenly;
 }
-}
+
 
 #Feed{
 	width:20vw !important;
@@ -119,19 +123,35 @@ body a:visited{
 	width: 40vw;
     overflow: hidden;
     text-align: center;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    flex-wrap: wrap;
-	height:40vh;
-	padding:2vw;
-	color:white;
+    /* flex-wrap: wrap; */
+    height: 29vh;
+    padding: 2vw;
+	margin-bottom:5vh;
+    color: white;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
 }
 .Article img{
-	width:100%;
+	width: 40vw;
+    z-index: -1;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.Article:hover{
+	color:black !important;
 }
 .Article h1{
-	color:white;
-	margin-bottom:1vh;
+    margin-bottom: 1vh;
+    /* position: absolute; */
+    z-index: 1;
+    width: 40vw;
+    /* position: absolute; */
+    grid-row-start: 0;
+    grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 #right-side-content{
@@ -181,7 +201,48 @@ body a:visited{
 	width:40vw;
 }
 
+.space-component{
+	width:100%;
+	text-align:center;
+	margin-top:5vh;
+	margin-bottom:5vh;
 
+}
+
+.space-component img{
+	width:50%;
+}
+
+@media screen and (max-width:1223px){
+	#Main-Content{
+		justify-content: center !important;
+	}
+	#right-side-content{
+		position:fixed;
+		opacity:0%;
+		z-index:-1;
+	}
+
+	#feed{
+		position:fixed;
+		opacity:0%;
+		z-index:-1;
+	}
+	.nav-item{
+		font-size:4vw !important;
+	}
+
+	#logo{
+		position:fixed;
+		z-index:-1;
+		opacity:0%;
+	}
+
+	#navMenu{
+		display:flex !important;
+		justify-content: space-around;
+	}
+}
 
 
 
