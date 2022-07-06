@@ -1,0 +1,50 @@
+<html lang="en">
+
+	<head>
+		
+		<title>
+			@BrattPack63
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="matthew cohen" content="BrattPack63">
+		<link rel="stylesheet" type="text/css" href="App.css">
+		<script src="pics.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
+		
+	</head>
+
+    <body>
+		<div id = "stripes">
+			<div class = "stripe"></div>
+			<div class = "stripe"></div>
+			<div class = "stripe"></div>
+		</div>
+		<div id="nav">
+			<div id = "navMenu">
+					<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
+					<a style = "grid-column-start:4" class = "nav-item" href = "spaces.html">Spaces</a>
+					<a id = "logo" style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
+						<img src='img/logo.png'/>
+					</a>
+					<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
+					<a style ="grid-column-start:10"class = "nav-item" href = "pics.html">Bratt Pack Pics</a>
+				</div>
+		
+		</div>
+        <h1 style = "text-align: center;
+		color: white;" id = "community">THANK YOU FOR ALL THE SUPPORT. JBITBPITNHL. SPREAD THE WORD!</h1>
+		<div id = "pics"></div>
+        <script>
+            for(var i = 0; i < pics.length;i++){
+				var picDiv = document.createElement('div')
+				picDiv.id = "pic-containter"
+                var newPic = document.createElement('img')
+				newPic.src = pics[i]
+				picDiv.appendChild(newPic)
+				document.getElementById('pics').appendChild(picDiv)
+            }
+        </script>
+    </body>

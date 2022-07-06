@@ -43,31 +43,28 @@
 			<div id = "Articles">
 			</div>
 			<script>
+				const colors = ["rgb(166,62,62)","rgb(24,142,114)","F9E9B8" ]
 				console.log(myJSON.content)
 				const articles = myJSON.content
+				var colorscounter = 0
 				for (let i = 0; i < articles.length; i++) {
-				const elem = document.createElement(`a`);
-				elem.className = "Article";
-				const h = document.createElement(`h1`);
-				const img = document.createElement(`img`);
-				img.src = articles[i].img;
-				h.innerHTML = articles[i].title;
-				elem.href = articles[i].route;
-				
-				if(articles[i].type === "article"){
+					const elem = document.createElement(`a`);
+					elem.className = "Article";
+					const h = document.createElement(`h1`);
+					const img = document.createElement(`img`);
+					img.src = articles[i].img;
+					h.innerHTML = articles[i].title;
+					elem.href = articles[i].route;
+					if(colorscounter === 3){
+						colorscounter = 0
+					}
+					console.log(colorscounter, i)
 					elem.appendChild(h);
-					elem.appendChild(img);
-				}
-				else if(articles[i].type === "space"){
-					elem.appendChild(h);
-					elem.style.backgroundColor = "rgb(166,62,62)"
-				}
-				else if(articles[i].type === "appearance"){
-					elem.appendChild(h);
+					elem.style.backgroundColor = colors[colorscounter]
 
-					elem.style.backgroundColor = "rgb(24,142,114)"
-				}
+					colorscounter+=1
 					document.getElementById("Articles").appendChild(elem);
+					
 				}
 			</script>
 			<div id = "right-side-content">

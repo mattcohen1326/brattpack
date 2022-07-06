@@ -1,0 +1,1 @@
+var pics = ["./img/community/1.jpg","./img/community/2.jpg_small","./img/community/3.jpg_small","./img/community/4.jpg_medium","./img/community/5.jpg_medium"]

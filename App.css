@@ -92,7 +92,7 @@ body a{
     text-decoration: none;
     font-family: 'Seaweed Script', cursive;
     font-size: 2.0vw;
-    text-shadow: 0.5px 0.5px red;
+    text-shadow: 0.5px 0.5px rgb(166,62,62);
     text-align: center;
     grid-row-start: 4;
     grid-row-end: 4;
@@ -101,7 +101,7 @@ body a{
     align-items: center;
 }
 #navMenu a:hover{
-	color:red !important;
+	color:rgb(166,62,62) !important;
 }
 #navMenu a img{
 	margin-top:0vh !important;
@@ -130,6 +130,7 @@ body a{
     padding: 2vw;
 	margin-bottom:5vh;
     color: white;
+	text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
@@ -140,9 +141,7 @@ body a{
     grid-row-start: 1;
     grid-column-start: 1;
 }
-.Article:hover{
-	color:black !important;
-}
+
 .Article h1{
     margin-bottom: 1vh;
     /* position: absolute; */
@@ -175,7 +174,7 @@ body a{
 
 #count{
 	width:20vw;
-	color:red !important;
+	color:rgb(166,62,62) !important;
 }
 
 #spaces{
@@ -187,7 +186,7 @@ body a{
 	text-align:center;
 }
 #spaces img{
-	width:25%;
+	width:40%;
 	
 }
 
@@ -213,7 +212,23 @@ body a{
 	width:50%;
 }
 
+
+#pics{
+	display:flex;
+	flex-wrap:wrap;
+	width:75vw;
+	margin-left:12.5vw;
+	justify-content:center;
+}
+#pic-containter{
+	margin:5vw;
+}
+#pics img{
+	max-height:50vh;
+}
+
 @media screen and (max-width:1223px){
+
 	#Main-Content{
 		justify-content: center !important;
 	}
