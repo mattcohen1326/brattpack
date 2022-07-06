@@ -52,6 +52,7 @@
 			</div>
 			<script>
 				const colors = ["rgb(166,62,62)","rgb(24,142,114)","F9E9B8" ]
+				var brattcount = 1
 				console.log(myJSON.content)
 				const articles = myJSON.content
 				var colorscounter = 0
@@ -63,6 +64,18 @@
 					img.src = articles[i].img;
 					h.innerHTML = articles[i].title;
 					elem.href = articles[i].route;
+					if(brattcount === 11){
+						brattcount = 1
+					}
+					if(colorscounter === 2){
+						const bratter = document.createElement('div')
+						bratter.className = "Article"
+						const bimg = document.createElement('img')
+						bimg.src = './img/jesper/' + brattcount.toString() + '.jpeg'
+						bratter.appendChild(bimg)
+						document.getElementById("Articles").appendChild(bratter)
+						brattcount++
+					}
 					if(colorscounter === 3){
 						colorscounter = 0
 					}
