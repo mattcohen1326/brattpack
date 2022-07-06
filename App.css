@@ -212,7 +212,11 @@ body a{
 	width:50%;
 }
 
-
+#mobile-content{
+	opacity:0%;
+	position:fixed;
+	z-index:-2;
+}
 #pics{
 	display:flex;
 	flex-wrap:wrap;
@@ -232,10 +236,24 @@ body a{
 	#Main-Content{
 		justify-content: center !important;
 	}
+	#spaces{
+		margin-top:25vw;
+	}
 	#right-side-content{
 		position:fixed;
 		opacity:0%;
 		z-index:-1;
+	}
+	#stripes{
+		z-index:3;
+		position: fixed;
+    background-color: black;
+	}
+
+	#nav{
+		background-color: black;
+		position: fixed;
+		z-index: 2;
 	}
 
 	#feed{
@@ -256,6 +274,56 @@ body a{
 	#navMenu{
 		display:flex !important;
 		justify-content: space-around;
+	}
+
+	#mobile-content{
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	opacity: 100% !important;
+    position: relative !important;
+    color: white;
+    padding: 5vh;
+		
+	}
+	#Articles{
+		margin-top:7vh;
+	}
+	#best-player-mobile{
+		font-size: 4.3vw;
+	}
+
+	#mobile-content #counter{
+		height: 15vh;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+		font-size: .6vw;
+		
+	}
+
+	#mobile-content #currently{
+		font-size: 2vw;
+		width:100vw;
+	}
+
+	#mobile-content #count{
+		font-size: 4vw;
+		width:100vw;
+	}
+
+	#mobile-content #strong{
+		font-size: 2vw;
+		width:100vw;
+	}
+
+	
+
+
+
+	.Article{
+		height: 15vh !important;
 	}
 }
 
