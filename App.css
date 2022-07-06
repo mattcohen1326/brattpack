@@ -216,8 +216,8 @@ body a{
 #pics{
 	display:flex;
 	flex-wrap:wrap;
-	width:75vw;
-	margin-left:12.5vw;
+	width:90vw;
+	margin-left:5vw;
 	justify-content:center;
 }
 #pic-containter{
