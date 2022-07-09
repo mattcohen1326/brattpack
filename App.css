@@ -23,7 +23,7 @@ body a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-	
+	position: relative;
     width: 100vw;	
 }
 
@@ -231,6 +231,32 @@ body a{
 	max-height:50vh;
 }
 
+#posts{
+	width:50vw;
+	display:flex;
+	color:white;
+	text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+    overflow-y:scroll;
+	flex-wrap:wrap;
+	justify-content: center;
+
+}
+
+#posts::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.blogPost{
+	width:50vw;
+	text-align: center;
+	height:15vw;
+	margin-top:10vh;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+
+}
+
 @media screen and (max-width:1223px){
 
 	#Main-Content{
@@ -317,9 +343,6 @@ body a{
 		font-size: 2vw;
 		width:100vw;
 	}
-
-	
-
 
 
 	.Article{

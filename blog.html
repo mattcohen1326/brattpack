@@ -1,0 +1,92 @@
+<html lang="en">
+
+	<head>
+		
+		<title>
+			@TheBrattPack63
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="matthew cohen" content="BrattPack63">
+		<script src="content.js"></script>
+		<link rel="stylesheet" type="text/css" href="App.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
+		
+	</head>
+
+    <body style = "overflow-y: hidden !important;">
+        <div id = "stripes">
+			<div class = "stripe"></div>
+			<div class = "stripe"></div>
+			<div class = "stripe"></div>
+		</div>
+		<div id="nav">
+			<div id = "navMenu">
+					<a style = "grid-column-start:2"class = "nav-item"href = "index.html">Home</a>
+					<a style = "grid-column-start:4" class = "nav-item" href = "spaces.html">Spaces</a>
+					<a id = "logo" style = "z-index:1; text-align:center; grid-column-start:6;" href = "index.html"> 
+						<img src='img/logo.png'/>
+					</a>
+					<a style = "grid-column-start:8"class = "nav-item" href = "appearances.html">Appearances</a>
+					<a style ="grid-column-start:10"class = "nav-item" href = "pics.html">Bratt Pack Pics</a>
+				</div>
+		
+		</div>
+        <div id = "Main-Content" style="justify-content: center; height:100%;">
+            <div id = "posts"></div>
+        </div>
+        <script>
+            var colorChoice = 0
+            const colors = ["rgb(166,62,62)","rgb(24,142,114)","F9E9B8" ]
+            function chooseColor(){
+                var returnColor = colorChoice
+                colorChoice++
+                if(colorChoice === 3){
+                    colorChoice = 0
+                }
+                return returnColor
+
+            }
+            const blogList = myJSON.content.filter(obj => obj.type === "blog")
+            function generateBlogs(){
+                for(blogx in blogList){
+                    blogf = blogList[blogx]
+                    var blog = document.createElement('div')
+                    blog.className = "blogPost"
+                    blog.onclick = () => {blogPost(blogf)}
+                    var title = document.createElement('h1')
+                    title.innerHTML = blogf.date + " : " +blogf.title
+                    blog.appendChild(title)
+                    blog.style.backgroundColor = colors[chooseColor()]
+                    document.getElementById('posts').appendChild(blog) 
+                }
+            }
+            function blogPost(blogx){
+                removeAllChildNodes(document.getElementById('posts'))
+                var blog = document.createElement('div')
+                blog.className = 'blogComponent'
+                var title = document.createElement('h1')
+                title.innerHTML = blogx.title
+                var body = document.createElement('p')
+                body.innerHTML = blogx.body
+                blog.appendChild(title)
+                blog.appendChild(body)
+                document.getElementById('posts').appendChild(blog)
+            }
+            function removeAllChildNodes(parent) {
+                while (parent.firstChild) {
+                    parent.removeChild(parent.firstChild);
+                }
+            }
+
+            window.history.pushState(null, null, window.location.href);
+            window.onpopstate = function () {
+                window.location.reload()
+            };
+            generateBlogs()
+        </script>
+
+    </body>

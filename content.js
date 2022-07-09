@@ -9,6 +9,63 @@ var myJSON = {
             "img":"img/spaces/77.jpg"
         },
         {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
+            "type":"blog",
+            "date" : "7/6/2022",
+            "title": "First Post",
+            "route":"blog.html",
+            "body" : "Test"
+        },
+        {
             "type":"space",
             "title":"Devils Fam Twitter Space July 10th",
             "date":"710",
